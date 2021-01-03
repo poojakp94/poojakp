@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
+import NavBar from "./components/navbar";
+import IntroCard from "./components/introSection";
+import Project from "./components/project";
+import Footer from "./components/footer";
+
+const AppContainer = styled.div`
+  padding: 20px;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContainer>
+      <NavBar />
+      <IntroCard />
+      <Project />
+      <Footer />
+    </AppContainer>
   );
 }
 
