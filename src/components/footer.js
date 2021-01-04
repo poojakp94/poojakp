@@ -4,8 +4,9 @@ const Container = styled.div`
   display: flex;
   gap: 10px;
   justify-content: center;
-  box-shadow: 3px 4px 12px 1px #ccc;
-  border-radius: 4px;
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--card-box-shadow);
+  padding: var(--card-padding);
   margin-top: 20px;
 `;
 
