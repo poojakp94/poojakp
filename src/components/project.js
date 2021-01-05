@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import github from "../assets/github.png"
+import github from "../assets/github.png";
+
 const Container = styled.div`
   border-radius: var(--card-border-radius);
   box-shadow: var(--card-box-shadow);
   padding: var(--card-padding);
   margin-top: 20px;
 `;
-
 
 const Img = styled.img`
   width: 100%;
@@ -16,10 +16,10 @@ const DescriptionContainer = styled.div`
   padding: 10px;
 `;
 
-const Project = ({ toggleImg, gif, img, data }) => {
+const Project = ({img, data }) => {
   return (
     <Container>
-      <Img src={toggleImg ? gif : img} alt="loading..."   />
+      <Img src={img} alt="loading..."   />
       <DescriptionContainer>
         <p>{data.description}</p>
         <p>Tech used: {data.techUsed}</p>

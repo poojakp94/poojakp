@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import profileImg from "../assets/profileImg.jpg";
 const Container = styled.div`
-  padding: 10px;
-  border-radius: 4px;
-  box-shadow: 3px 4px 12px 1px #ccc;
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--card-box-shadow);
   margin-top: 30px;
   @media (min-width: 768px) {
     display: flex;

@@ -2,9 +2,9 @@ import styled from "styled-components";
 import twitter from "../assets/twitter.png";
 import github from "../assets/github.png";
 import linkedin from "../assets/linkedin.png";
-import sun from "../assets/sun.png";
-import moon from "../assets/moon.png";
-import { useState } from "react";
+// import sun from "../assets/sun.png";
+// import moon from "../assets/moon.png";
+
 
 const Container = styled.div`
   display: flex;
@@ -24,20 +24,19 @@ const Img = styled.img`
   width: 30px;
 `;
 
-const ToggleBtn = styled.button`
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 1px solid #ddd;
-  background-color: transparent;
-  color: #fff;
-  outline: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
+// const ToggleBtn = styled.button`
+//   width: 30px;
+//   height: 30px;
+//   border-radius: 50%;
+//   border: 1px solid #ddd;
+//   background-color: transparent;
+//   color: #fff;
+//   outline: none;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// `;
 const NavBar = () => {
-  const [theme, toggleTheme] = useState(true);
   return (
     <Container>
       <IconContainer>
@@ -54,11 +53,9 @@ const NavBar = () => {
           <Img src={linkedin} />
         </a>
       </IconContainer>
-      <ToggleBtn onClick={()  => toggleTheme(!theme)}>
-        
-        <img src={theme ? moon : sun}  style={{width: "20px"}}/>
-      
-      </ToggleBtn>
+      {/* <ToggleBtn onClick={() => toggleTheme(!theme)}>
+        <img src={theme ? moon : sun} style={{ width: "20px" }} />
+      </ToggleBtn> */}
     </Container>
   );
 };
