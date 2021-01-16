@@ -7,10 +7,8 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: var(--card-border-radius);
-  box-shadow: var(--card-box-shadow);
-  padding: var(--card-padding);
-  margin-top: 20px;
+  border-top: 1px dashed #444;
+  padding-top: 20px;  
 `;
 
 const Text = styled.p`
@@ -27,20 +25,20 @@ const Footer = () => {
   return (
     <Container>
       <IconContainer>
-        <a href="https://github.com/poojakp94" target="_blank">
+        <a href="https://github.com/poojakp94" target="_blank" rel="noreferrer">
           <Img src={github} />
         </a>
-        <a href="https://twitter.com/poojakp16" target="_blank">
+        <a href="https://twitter.com/poojakp16" target="_blank" rel="noreferrer">
           <Img src={twitter} />
         </a>
         <a
           href="https://www.linkedin.com/in/pooja-prasad-ba1323129/"
-          target="_blank"
+          target="_blank" rel="noreferrer"
         >
           <Img src={linkedin} />
         </a>
       </IconContainer>
-      <Text>&copy; 2021</Text>
+      <Text>&copy; 2021, PoojaKp </Text>
     </Container>
   );
 };
