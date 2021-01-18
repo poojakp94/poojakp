@@ -7,14 +7,16 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 `
 const FieldWrapper = styled.form`
   width: calc(100% - 100px);
   border-radius: var(--card-border-radius);
-  box-shadow: inset 0 0.75rem 2rem rgba(229, 225, 187, 0.5);
+  box-shadow: inset 0 0.75rem 2rem rgba(229, 225, 197, 0.7);
   padding: 50px;
   display: flex;
   flex-direction:column;
+  background-color:#fff;
   @media (min-width: 768px) {
     width: 25%;
   }  

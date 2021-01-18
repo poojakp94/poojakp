@@ -11,6 +11,7 @@ const Container = styled.div`
   border-radius: var(--card-border-radius);
   box-shadow: var(--card-box-shadow);
   padding: var(--card-padding);
+  background-color:#fff;
 `;
 
 const IconContainer = styled.div`

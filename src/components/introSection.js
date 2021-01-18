@@ -1,103 +1,88 @@
 import styled from "styled-components";
-import profileImg from "../assets/profileImg.jpg";
+import profileImg from "../assets/nobg.jpg";
+import ProgressBar from "./progressbar";
+import ffc from '../assets/ffc.png'
 
 const Container = styled.div`
-  /* width: 100%; */
-  height: 800px;
   padding: 50px;
   display: flex;
   flex-direction: column;
- /* justify-content: space-around; */
- gap: 50px;
- align-items:center;
- background-color: #ff9d00;
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23000' stroke-width='66.7' stroke-opacity='0.05' %3E%3Ccircle fill='%23ff9d00' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23fb8d17' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%23f47d24' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%23ed6e2d' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%23e35f34' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%23d85239' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%23cc453e' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%23be3941' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%23b02f43' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%23a02644' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%23901e44' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%23801843' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%236f1341' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%235e0f3d' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%234e0c38' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%233e0933' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%232e062c' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%23210024' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E");
-background-size: cover;
- color: #fff;
- @media (max-width: 768px){
-   flex-direction: column;
-   padding: 10px;
-   height:800px;
+  gap: 80px;
+  align-items:center;
+  background-color: #000000;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='30' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23222' stroke-width='10' %3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+  color: #fff;
+  @media (max-width: 768px){
+    padding: 10px;
  }
 `;
 
-const Intro = styled.div`
-/* border: 1px solid yellowgreen; */
-display: flex;
-align-items: center;
-/* border-right: 1px solid palegreen; */
-@media (max-width: 768px){
-  flex-direction: column;
-  /* border-bottom: 1px solid palegreen; */
-  /* border-right: none; */
-}
-`
 const ImgContainer = styled.div`
-width: 50%;
-text-align: center;
-/* border: 1px solid red; */
+  text-align: center;
 `
 const Img = styled.img`
-  width: 100%;
-  @media (min-width: 768px) {
-    width: 40%;
-  }
+  width: 330px;
+  height:330px;
+  border-radius: 50%;
 `;
-const Text = styled.h1`
+const Heading= styled.h1`
   font-weight: normal;
-  /* letter-spacing: 0.1rem; */
   text-align: center;
-  /* border: 1px dashed pink; */
 `;
-
-const CertificateContainer = styled.section`
-  border: 1px dashed red;
-  display: flex;
-  align-items:center;
+const Section= styled.section`
   width: 100%;
-  height: 300px;
-  /* float: right; */
-  /* align-self: flex-start; */
-  
+  display: flex;
+  justify-content: space-between;
   @media (max-width: 768px){
     flex-direction:column;
+    gap: 80px;
   }
 `
-const Title = styled.h3`
-  transform: rotate(-90deg);
-  border: 1px solid #fff;
+const Wrapper = styled.section`
+  display: flex;
+  gap: 15px;
+`
+const Title = styled.div`
+  writing-mode: vertical-rl;
+  text-orientation: upright;
   padding: 10px;
-  @media (max-width: 768px){
-    transform: none;
-  }
-`
-const Content = styled.div`
-  /* border: 1px solid paleturquoise; */
-  margin-left: -100px;
-  align-self: flex-start;
-  @media (max-width: 768px){
-    margin-left: 0px;
-  }
+  font-size: 1.5rem;
+  border: 1px solid yellowgreen;
 `
 const AnchorTag = styled.a`
-text-decoration: none;
-color: #ddd;
-font-size: .8rem;
-letter-spacing: 1px;
-padding-top: 15px;
+  text-decoration: none;
+  color: #ddd;
+  font-size: .8rem;
+  letter-spacing: 1px;
+  padding-top: 15px;
 `
-
-
+const ProgressContainer = styled.div`
+  width: 100%;
+  display:flex;
+  gap: 10px;
+  align-items: center;
+  @media (max-width: 768px){
+    flex-direction: column-reverse;
+    gap: 2px;
+  }
+`
+const CertificateTitle = styled(Title)`
+  display: flex;
+  align-items: center;
+`
+const Imgffc = styled.img`
+  width: 50px;
+  text-align: center;
+`
 const IntroCard = () => {
   return (
     <Container>
-      <Intro>
+      <Heading>Hello, my name is Pooja. I am a Front End Developer living in Delhi, India. </Heading>
       <ImgContainer><Img src={profileImg} /></ImgContainer>
-      <Text>Hello, my name is Pooja. I am a Front End Developer living in Delhi, India. </Text>
-      </Intro>
-      <CertificateContainer>
-      <Title>FreeCodeCamp Certifications</Title>
-      <Content>
+      <Section>
+      <Wrapper>
+      <CertificateTitle><Imgffc src={ffc}/>Certificate</CertificateTitle>
+      <div>
       <div>
         <p>Front End Libraries Certificate</p>
         <AnchorTag href="http://www.freecodecamp.org/certification/poojakp/front-end-libraries" target="_blank" rel="noreferrer" title="http://www.freecodecamp.org/certification/poojakp/front-end-libraries">Check here 👈</AnchorTag>
@@ -112,8 +97,34 @@ const IntroCard = () => {
         <p>Responsive Web Design Certificate</p>
         <AnchorTag href="https://www.freecodecamp.org/certification/poojakp/responsive-web-design" target="_blank" rel="noreferrer" title="https://www.freecodecamp.org/certification/poojakp/responsive-web-design">Check here 👈</AnchorTag>
       </div>
-      </Content>
-      </CertificateContainer>
+      </div>
+      </Wrapper>
+      <Wrapper>
+      <Title>Progress Bar</Title>
+      <div>
+      <ProgressContainer>
+      <ProgressBar done="90"/>
+      <span>HTML</span>
+      </ProgressContainer>
+      <ProgressContainer>
+        <ProgressBar done="85"/>
+        <span>CSS</span>
+      </ProgressContainer>
+      <ProgressContainer>
+        <ProgressBar done="75"/>
+        <span>JavaScript</span>
+      </ProgressContainer>
+      <ProgressContainer>
+        <ProgressBar done="70" />
+          <span>React</span>
+      </ProgressContainer>
+      <ProgressContainer>
+        <ProgressBar done="40" />
+          <span>Vue</span>
+      </ProgressContainer>
+      </div>
+      </Wrapper>
+      </Section>
     </Container>
   );
 };

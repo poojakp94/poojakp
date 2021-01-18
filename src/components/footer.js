@@ -8,7 +8,8 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   border-top: 1px dashed #444;
-  padding-top: 20px;  
+  padding-top: 20px; 
+  background-color:#fff; 
 `;
 
 const Text = styled.p`
@@ -38,7 +39,7 @@ const Footer = () => {
           <Img src={linkedin} />
         </a>
       </IconContainer>
-      <Text>&copy; 2021, PoojaKp </Text>
+      <Text>&copy; 2021, Pooja </Text>
     </Container>
   );
 };

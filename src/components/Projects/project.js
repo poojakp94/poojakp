@@ -11,6 +11,7 @@ const Container = styled.div`
   flex-direction: column;
   gap: 20px;
   /* justify-content: space-between; */
+  background-color:#fff;
 `;
 
 const Img = styled.img`
