@@ -29,6 +29,7 @@ function App() {
         <Route path="/projects" exact component={Projects}/>
       </Switch>
       <Contact />
+      
       <Footer />
       </Router>
     </AppContainer>

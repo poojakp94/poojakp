@@ -74,10 +74,21 @@ const Imgffc = styled.img`
   width: 50px;
   text-align: center;
 `
+
+const Em =styled.em`
+  background: radial-gradient(
+    circle farthest-corner at center center,
+    #F2709C,
+    #fff
+  ) no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+`
 const IntroCard = () => {
   return (
     <Container>
-      <Heading>Hello, my name is Pooja. I am a Front End Developer living in Delhi, India. </Heading>
+      <Heading>Hello, my name is Pooja. I am a <Em>Front End Developer</Em> living in Delhi, India. </Heading>
       <ImgContainer><Img src={profileImg} /></ImgContainer>
       <Section>
       <Wrapper>
@@ -119,7 +130,7 @@ const IntroCard = () => {
           <span>React</span>
       </ProgressContainer>
       <ProgressContainer>
-        <ProgressBar done="40" />
+        <ProgressBar done="20" />
           <span>Vue</span>
       </ProgressContainer>
       </div>

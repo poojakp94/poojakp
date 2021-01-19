@@ -11,7 +11,7 @@ const Container = styled.div`
 
 const Span = styled.span`
     background: linear-gradient(to left, #F2709C, #FF9472);
-	box-shadow: 0 3px 3px -5px #F2709C, 0 2px 5px #F2709C;
+	/* box-shadow: 0 3px 3px -5px #F2709C, 0 2px 5px #F2709C; */
 	border-radius: 20px;
 	color: #fff;
 	display: flex;
