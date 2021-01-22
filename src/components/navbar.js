@@ -33,11 +33,9 @@ const Tab = styled(NavLink)`
 text-decoration: none;
 color: black;
 &:hover {
-  color: coral;
+  color: red;
   border-bottom: 1px solid coral;
 }
-
-
 `
 const NavBar = () => {
   return (
@@ -57,8 +55,18 @@ const NavBar = () => {
         </a>
       </IconContainer>
       <TabContainer>
-        <Tab to="/">Home</Tab>
-        <Tab to="/projects">Projects</Tab>
+        <Tab to="/"  
+        activeStyle={{
+          fontWeight: "bold",
+          color: "red"}}
+        exact={true}>About
+        </Tab>
+        <Tab to="/projects" 
+        exact={true}
+        activeStyle={{
+          fontWeight: "bold",
+          color: "red"
+        }}>Projects</Tab>
       </TabContainer>
     </Container>
   );

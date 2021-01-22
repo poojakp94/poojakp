@@ -73,7 +73,7 @@ export default function Contact() {
   
   return (
     <Container>
-      <Title>Get In Touch</Title>
+      <Title>Contact</Title>
       <FieldWrapper method="POST" data-netlify="true">
         <Label>
           <span

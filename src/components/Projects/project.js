@@ -6,37 +6,42 @@ const Container = styled.div`
   box-shadow: var(--card-box-shadow);
   padding: var(--card-padding);
   width: 400px;
-  /* height: 400px; */
   display: flex;
   flex-direction: column;
   gap: 20px;
-  /* justify-content: space-between; */
+  transition-timing-function: alternate;
+  transition-duration: 0.5s;
   background-color:#fff;
+  &:hover {
+   transform: scale(1.1);
+  }
 `;
 
 const Img = styled.img`
   width: 100%;
-  height: 200px;
- 
+  height:295px;
 `;
 const DescriptionContainer = styled.div`
   border-left: 1px solid #0f171e;
   padding-left: 10px  ;
 `;
 const Text =styled.div`
-padding: 0 8px 8px 2px;
-align-self: flex-start;
+  padding: 0 8px 8px 2px;
+  align-self: flex-start;
 `
 
-const Project = ({img, data }) => {
+const ImgContainer = styled.div`
+  width: 100%;
+`
+const Project = ({data }) => {
   
   return (
     <Container>
-      <Img src={img} alt="loading..."   />
+      <ImgContainer><Img src={data.imgUrl} alt="loading..."   /></ImgContainer>
       <DescriptionContainer>
         <Text>{data.description}</Text>
         <Text>Tech used: {data.techUsed}</Text>
-        <Text>Deployed link: <a href={data.link}>{data.link}</a></Text>
+        <Text><a href={data.link}>{data.link}</a></Text>
         <a href={data.githubLink} target="_blank" rel="noreferrer">
           <img src={github} alt="screnshot" style={{width: "30px"}}/>
         </a>

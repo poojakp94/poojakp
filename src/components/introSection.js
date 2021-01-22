@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import profileImg from "../assets/nobg.jpg";
-import ProgressBar from "./progressbar";
 import ffc from '../assets/ffc.png'
 
 const Container = styled.div`
@@ -40,14 +38,16 @@ const Section= styled.section`
 `
 const Wrapper = styled.section`
   display: flex;
+  flex-direction: column;
   gap: 15px;
 `
-const Title = styled.div`
-  writing-mode: vertical-rl;
-  text-orientation: upright;
+const ResumeBox = styled.div`
   padding: 10px;
   font-size: 1.5rem;
   border: 1px solid yellowgreen;
+  &:hover {
+    border: 1px dashed white;
+  }
 `
 const AnchorTag = styled.a`
   text-decoration: none;
@@ -56,19 +56,20 @@ const AnchorTag = styled.a`
   letter-spacing: 1px;
   padding-top: 15px;
 `
-const ProgressContainer = styled.div`
-  width: 100%;
-  display:flex;
+const Resume = styled(AnchorTag)`
+  color: #fff;
+  font-size: 1.2rem;
+  padding-top: 0;
+`
+
+const CertificateTitle = styled.div`
+  display: flex;
   gap: 10px;
   align-items: center;
-  @media (max-width: 768px){
-    flex-direction: column-reverse;
-    gap: 2px;
-  }
-`
-const CertificateTitle = styled(Title)`
-  display: flex;
-  align-items: center;
+  letter-spacing: 0.2em;
+  padding: 10px;
+  font-size: 1.5rem;
+  border: 1px solid yellowgreen;
 `
 const Imgffc = styled.img`
   width: 50px;
@@ -85,11 +86,12 @@ const Em =styled.em`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `
+
 const IntroCard = () => {
   return (
     <Container>
       <Heading>Hello, my name is Pooja. I am a <Em>Front End Developer</Em> living in Delhi, India. </Heading>
-      <ImgContainer><Img src={profileImg} /></ImgContainer>
+      <ImgContainer><Img src="https://firebasestorage.googleapis.com/v0/b/imgs-94bc4.appspot.com/o/img2.png?alt=media&token=c6a1e1ab-ef1e-42dc-a1e8-031c26ceb5e8" /></ImgContainer>
       <Section>
       <Wrapper>
       <CertificateTitle><Imgffc src={ffc}/>Certificate</CertificateTitle>
@@ -111,29 +113,7 @@ const IntroCard = () => {
       </div>
       </Wrapper>
       <Wrapper>
-      <Title>Progress Bar</Title>
-      <div>
-      <ProgressContainer>
-      <ProgressBar done="90"/>
-      <span>HTML</span>
-      </ProgressContainer>
-      <ProgressContainer>
-        <ProgressBar done="85"/>
-        <span>CSS</span>
-      </ProgressContainer>
-      <ProgressContainer>
-        <ProgressBar done="75"/>
-        <span>JavaScript</span>
-      </ProgressContainer>
-      <ProgressContainer>
-        <ProgressBar done="70" />
-          <span>React</span>
-      </ProgressContainer>
-      <ProgressContainer>
-        <ProgressBar done="20" />
-          <span>Vue</span>
-      </ProgressContainer>
-      </div>
+        <ResumeBox><Resume href="https://firebasestorage.googleapis.com/v0/b/imgs-94bc4.appspot.com/o/Resume-Pooja.pdf?alt=media&token=1791175a-98d5-42ec-be61-af8da6c2d089" download target="_blank" >Download Resume</Resume></ResumeBox>
       </Wrapper>
       </Section>
     </Container>
