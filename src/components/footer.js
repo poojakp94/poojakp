@@ -39,7 +39,7 @@ const Footer = () => {
           <Img src={linkedin} />
         </a>
       </IconContainer>
-      <Text>&copy; 2021, Pooja </Text>
+      <Text>&copy; 2021, poojakp </Text>
     </Container>
   );
 };
