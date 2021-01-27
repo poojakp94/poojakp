@@ -41,7 +41,7 @@ const Project = ({data }) => {
       <DescriptionContainer>
         <Text>{data.description}</Text>
         <Text>Tech used: {data.techUsed}</Text>
-        <Text><a href={data.link}>{data.link}</a></Text>
+        <Text><a href={data.link} target="_blank" rel="noreferrer">{data.link}</a></Text>
         <a href={data.githubLink} target="_blank" rel="noreferrer">
           <img src={github} alt="screnshot" style={{width: "30px"}}/>
         </a>

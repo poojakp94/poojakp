@@ -31,7 +31,7 @@ export default function Contact() {
   return (
     <Container>
       <Title>Contact</Title>
-      <form className="form-wrapper" name="contact" method="POST" data-netlify="true">
+      <form className="form-wrapper" name="contact" action="POST" data-netlify="true">
         <input  type="hidden" name="form-name" value="contact" />
         <label className="textarea-label">
           <span
