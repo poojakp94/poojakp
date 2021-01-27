@@ -74,7 +74,8 @@ export default function Contact() {
   return (
     <Container>
       <Title>Contact</Title>
-      <FieldWrapper method="POST" data-netlify="true">
+      <FieldWrapper name="contact" method="POST" data-netlify="true" onSubmit="submit">
+        <input  type="hidden" name="form-name" value="contact" />
         <Label>
           <span
           style={{

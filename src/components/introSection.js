@@ -106,7 +106,7 @@ const IntroCard = () => {
           }}
         />
       </Heading>
-      <ImgContainer><Img src="https://firebasestorage.googleapis.com/v0/b/imgs-94bc4.appspot.com/o/finalimg.jpg?alt=media&token=4a3c6027-5b28-4633-a32a-5ed006641068"/></ImgContainer>
+      <ImgContainer><Img src="https://firebasestorage.googleapis.com/v0/b/imgs-94bc4.appspot.com/o/profile.jpg?alt=media&token=b078b4f8-2a56-4adc-8ba4-0a06588ec13e"/></ImgContainer>
       <Section>
       <Wrapper>
       <CertificateTitle><Imgffc src={ffc}/>Certificates</CertificateTitle>
