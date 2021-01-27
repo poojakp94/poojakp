@@ -32,7 +32,6 @@ export default function Contact() {
     <Container>
       <Title>Contact</Title>
       <form className="form-wrapper" name="contact" action="POST" data-netlify="true">
-        <input  type="hidden" name="form-name" value="contact" />
         <label className="textarea-label">
           <span
           style={{
@@ -74,8 +73,7 @@ export default function Contact() {
                 if (event.target.value === "") {
                     setFocuseOnNameField(false);
                 }
-              }}>
-          </input>
+              }} />
         </label>
         <label className="input-label">
           <span
@@ -96,8 +94,7 @@ export default function Contact() {
                 if (event.target.value === "") {
                     setFocuseOnEmailField(false);
                 }
-              }}>
-          </input>
+              }} />
         </label>
         <button type="submit">Send</button>
       </form>
