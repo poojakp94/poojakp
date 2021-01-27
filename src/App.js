@@ -1,9 +1,8 @@
 import styled from "styled-components";
-import NavBar from "./components/navbar";
-import IntroCard from "./components/introSection";
-import Projects from "./components/Projects/projectSection"
-import Footer from "./components/footer";
-import Contact from './components/contact/contact';
+// import NavBar from "./components/navbar";
+import Home from "./pages/home";
+import ProjectsPage from "./pages/projectsPage"
+import PageNotFound from "./pages/pageNotFound";
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import "./App.css";
 
@@ -14,23 +13,15 @@ const AppContainer = styled.div`
   gap: 20px;
 `;
 
-
-
-
 function App() {
- 
-  
   return (
     <AppContainer>
       <Router>
-      <NavBar />
       <Switch>
-        <Route path="/" exact component={IntroCard}/>
-        <Route path="/projects" exact component={Projects}/>
+        <Route path="/" exact component={Home}/>
+        <Route path="/projects" exact component={ProjectsPage}/>
+        <Route exact component={PageNotFound} />
       </Switch>
-      <Contact />
-      
-      <Footer />
       </Router>
     </AppContainer>
   );

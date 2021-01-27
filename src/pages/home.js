@@ -1,7 +1,10 @@
 import styled from "styled-components";
 import ffc from '../assets/ffc.png'
-import Projects from './Projects/projectSection';
+import Projects from '../components/Projects/projectSection';
 import Typewriter from 'typewriter-effect';
+import NavBar from '../components/navbar';
+import Contact from '../components/contact/contact';
+import Footer from '../components/footer';
 
 const Container = styled.div`
   border-radius: var(--card-border-radius);
@@ -92,10 +95,18 @@ const Imgffc = styled.img`
   width: 50px;
   text-align: center;
 `
+const Title = styled.div`
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  font-size: 2rem;
+  text-align: center;
+  padding: 10px 0;
+`;
 
-const IntroCard = () => {
+const Home = () => {
   return (
     <>
+    <NavBar />
     <Container>
       <Heading>
         <Typewriter
@@ -130,9 +141,12 @@ const IntroCard = () => {
       <ResumeBox><Resume href="https://firebasestorage.googleapis.com/v0/b/imgs-94bc4.appspot.com/o/Resume-Pooja.pdf?alt=media&token=1791175a-98d5-42ec-be61-af8da6c2d089" download target="_blank" >Download Resume</Resume></ResumeBox>
     </Section>
     </Container>
-    <Projects></Projects>
+    <Title>Projects</Title>
+    <Projects />
+    <Contact />
+    <Footer />
     </>
   );
 };
 
-export default IntroCard;
+export default Home;

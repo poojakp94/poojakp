@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Project from "./project";
+import Project from "./projectCard";
 
 const ProjectContainer = styled.div`
   padding: 10px;
@@ -8,13 +8,7 @@ const ProjectContainer = styled.div`
   flex-flow: wrap;
   justify-content:center;
 `
-const Title = styled.div`
-  letter-spacing: 0.1rem;
-  font-weight: 600;
-  font-size: 2rem;
-  text-align: center;
-  padding: 10px 0;
-`;
+
 function Projects (){
     const data = {
         Project1: {
@@ -61,7 +55,6 @@ function Projects (){
       };
     return(
         <>
-        <Title>Projects</Title>
         <ProjectContainer>
           <Project data={data.Project1} />
           <Project data={data.Project2} />
