@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import styled from 'styled-components';
+import './contact.css';
 
 const Container = styled.div`
   width: 100%;
@@ -9,51 +10,7 @@ const Container = styled.div`
   align-items: center;
   
 `
-const FieldWrapper = styled.form`
-  width: calc(100% - 100px);
-  border-radius: var(--card-border-radius);
-  box-shadow: inset 0 0.75rem 2rem rgba(229, 225, 197, 0.7);
-  padding: 50px;
-  display: flex;
-  flex-direction:column;
-  background-color:#fff;
-  @media (min-width: 768px) {
-    width: 25%;
-  }  
-`
-const Input = styled.input`
-  border: none;
-  border-bottom: 1px solid rgba(229, 225, 187, 0.8);
-  line-height: 1.5rem;
-  outline: none;
-`
-const Label = styled.label`
-  position: relative;
-  margin: 20px 0;
-`
-const InputLabel = styled(Label)`
-  align-self: flex-end;
-`
-const Textarea = styled.textarea`
-  border: none;
-  outline: none;
-  width: 100%;
-  line-height: 4ch;
-  background-image: linear-gradient(transparent, transparent calc(4ch - 1px), rgba(229, 225, 187, 0.8) 0px);
-  background-size: 100% 4ch;
-`
-const Button = styled.button`
-  padding: 8px 20px;
-  border: 1px solid rgba(229, 225, 187, 0.8);
-  background: #fff;
-  outline: none;
-  line-height: 1.5rem;
-  align-self: flex-end;
-  &:hover {
-    color: blueviolet;
-    border: 1px solid blueviolet;
-  }
-`
+
 const Title = styled.div`
   letter-spacing: 0.1rem;
   font-weight: 600;
@@ -74,9 +31,9 @@ export default function Contact() {
   return (
     <Container>
       <Title>Contact</Title>
-      <FieldWrapper name="contact" method="POST" data-netlify="true" onSubmit="submit">
+      <form className="form-wrapper" name="contact" method="POST" data-netlify="true">
         <input  type="hidden" name="form-name" value="contact" />
-        <Label>
+        <label className="textarea-label">
           <span
           style={{
             position: "absolute",
@@ -87,7 +44,7 @@ export default function Contact() {
           >
           Message
           </span>
-          <Textarea name="message" value={message} onChange={event => {event.preventDefault();
+          <textarea name="message" value={message} onChange={event => {event.preventDefault();
             const {value}= event.target;
             setMessage(value)}}
             onFocus={()=>{setFocuseOnMessageField(true)}}
@@ -96,9 +53,9 @@ export default function Contact() {
                     setFocuseOnMessageField(false);
                 }
               }}rows="5">
-          </Textarea>
-        </Label>
-        <InputLabel>
+          </textarea>
+        </label>
+        <label className="input-label">
           <span
             style={{
               position: "absolute",
@@ -109,7 +66,7 @@ export default function Contact() {
           >
             Name
           </span>
-          <Input type="text" name="name" value={name} onChange={event => {event.preventDefault();
+          <input type="text" name="name" value={name} onChange={event => {event.preventDefault();
             const {value}= event.target;
             setName(value)}}
             onFocus={()=>{setFocuseOnNameField(true)}}
@@ -118,9 +75,9 @@ export default function Contact() {
                     setFocuseOnNameField(false);
                 }
               }}>
-          </Input>
-        </InputLabel>
-        <InputLabel>
+          </input>
+        </label>
+        <label className="input-label">
           <span
           style={{
             position: "absolute",
@@ -131,7 +88,7 @@ export default function Contact() {
           >
             Email
           </span>
-          <Input type="email" name="email" value={email} onChange={event => {event.preventDefault();
+          <input type="email" name="email" value={email} onChange={event => {event.preventDefault();
             const {value}= event.target;
             setEmail(value)}}
             onFocus={()=>{setFocuseOnEmailField(true)}}
@@ -140,10 +97,10 @@ export default function Contact() {
                     setFocuseOnEmailField(false);
                 }
               }}>
-          </Input>
-        </InputLabel>
-        <Button type="submit">Send</Button>
-      </FieldWrapper>
+          </input>
+        </label>
+        <button type="submit">Send</button>
+      </form>
     </Container>
   )
 }

@@ -3,7 +3,7 @@ import NavBar from "./components/navbar";
 import IntroCard from "./components/introSection";
 import Projects from "./components/Projects/projectSection"
 import Footer from "./components/footer";
-import Contact from './components/contact';
+import Contact from './components/contact/contact';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import "./App.css";
 

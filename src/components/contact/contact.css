@@ -1,0 +1,55 @@
+.form-wrapper {
+    width: calc(100% - 100px);
+    border-radius: var(--card-border-radius);
+    box-shadow: inset 0 0.75rem 2rem rgba(229, 225, 197, 0.7);
+    padding: 50px;
+    display: flex;
+    flex-direction:column;
+    background-color:#fff;
+}
+
+@media screen and (min-width: 768px){
+    .form-wrapper {
+        width: 25%;
+    }
+}
+
+.input-label {
+    position: relative;
+    margin: 20px 0;
+    align-self: flex-end; 
+}
+
+.textarea-label {
+    position: relative;
+    margin: 20px 0;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid rgba(229, 225, 187, 0.8);
+    line-height: 1.5rem;
+    outline: none;
+}
+
+textarea {
+    border: none;
+    outline: none;
+    width: 100%;
+    line-height: 4ch;
+    background-image: linear-gradient(transparent, transparent calc(4ch - 1px), rgba(229, 225, 187, 0.8) 0px);
+    background-size: 100% 4ch;
+}
+
+button {
+    padding: 8px 20px;
+    border: 1px solid rgba(229, 225, 187, 0.8);
+    background: #fff;
+    outline: none;
+    line-height: 1.5rem;
+    align-self: flex-end;
+}
+button:hover{
+    color: blueviolet;
+    border: 1px solid blueviolet;
+}
