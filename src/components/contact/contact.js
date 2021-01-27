@@ -31,7 +31,8 @@ export default function Contact() {
   return (
     <Container>
       <Title>Contact</Title>
-      <form className="form-wrapper" name="contact" action="POST" data-netlify="true">
+      <form className="form-wrapper" name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact" />
         <label className="textarea-label">
           <span
           style={{
@@ -65,7 +66,7 @@ export default function Contact() {
           >
             Name
           </span>
-          <input type="text" name="name" value={name} onChange={event => {event.preventDefault();
+          <input required type="text" name="name" value={name} onChange={event => {event.preventDefault();
             const {value}= event.target;
             setName(value)}}
             onFocus={()=>{setFocuseOnNameField(true)}}
@@ -86,7 +87,7 @@ export default function Contact() {
           >
             Email
           </span>
-          <input type="email" name="email" value={email} onChange={event => {event.preventDefault();
+          <input required type="email" name="email" value={email} onChange={event => {event.preventDefault();
             const {value}= event.target;
             setEmail(value)}}
             onFocus={()=>{setFocuseOnEmailField(true)}}
