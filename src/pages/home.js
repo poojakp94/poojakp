@@ -58,14 +58,14 @@ const Wrapper = styled.section`
   flex-direction: column;
   gap: 15px;
 `
-const ResumeBox = styled.div`
-  padding: 10px;
-  border: 1px solid white;
-  align-self: center;
-  &:hover {
-    border: 1px dashed yellowgreen;
-  }
-`
+// const ResumeBox = styled.div`
+//   padding: 10px;
+//   border: 1px solid white;
+//   align-self: center;
+//   &:hover {
+//     border: 1px dashed yellowgreen;
+//   }
+// `
 const AnchorTag = styled.a`
   text-decoration: none;
   color: #ddd;
@@ -75,11 +75,11 @@ const AnchorTag = styled.a`
     color: yellowgreen;
   }
 `
-const Resume = styled(AnchorTag)`
-  color: #fff;
-  font-size: 1.2rem;
-  padding-top: 0;
-`
+// const Resume = styled(AnchorTag)`
+//   color: #fff;
+//   font-size: 1.2rem;
+//   padding-top: 0;
+// `
 
 const CertificateTitle = styled.div`
   display: flex;
@@ -138,7 +138,7 @@ const Home = () => {
       </li>
       </ul>
       </Wrapper>
-      <ResumeBox><Resume href="https://firebasestorage.googleapis.com/v0/b/imgs-94bc4.appspot.com/o/Resume-Pooja.pdf?alt=media&token=1791175a-98d5-42ec-be61-af8da6c2d089" download target="_blank" >Download Resume</Resume></ResumeBox>
+      {/* <ResumeBox><Resume href="https://firebasestorage.googleapis.com/v0/b/imgs-94bc4.appspot.com/o/Resume-Pooja.pdf?alt=media&token=1791175a-98d5-42ec-be61-af8da6c2d089" download target="_blank" >Download Resume</Resume></ResumeBox> */}
     </Section>
     </Container>
     <Title>Projects</Title>
